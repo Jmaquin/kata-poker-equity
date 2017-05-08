@@ -1,1 +1,1 @@
-# poker-equity-calculator
+# kata-poker-equity
