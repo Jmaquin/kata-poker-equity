@@ -1,11 +1,6 @@
 {
   "cards" : [
     {
-      "code" : "1C",
-      "suit" : "CLUBS",
-      "value" : 1
-    },
-    {
       "code" : "2C",
       "suit" : "CLUBS",
       "value" : 2
@@ -69,11 +64,6 @@
       "code" : "AC",
       "suit" : "CLUBS",
       "value" : 14
-    },
-    {
-      "code" : "1D",
-      "suit" : "DIAMONDS",
-      "value" : 1
     },
     {
       "code" : "2D",
@@ -141,11 +131,6 @@
       "value" : 14
     },
     {
-      "code" : "1H",
-      "suit" : "HEARTS",
-      "value" : 1
-    },
-    {
       "code" : "2H",
       "suit" : "HEARTS",
       "value" : 2
@@ -209,11 +194,6 @@
       "code" : "AH",
       "suit" : "HEARTS",
       "value" : 14
-    },
-    {
-      "code" : "1S",
-      "suit" : "SPADES",
-      "value" : 1
     },
     {
       "code" : "2S",
