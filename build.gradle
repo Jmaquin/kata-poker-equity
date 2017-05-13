@@ -18,5 +18,6 @@ repositories {
 
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib:1.1.2-2'
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.8.7"
     testCompile 'io.kotlintest:kotlintest:2.0.1'
 }
