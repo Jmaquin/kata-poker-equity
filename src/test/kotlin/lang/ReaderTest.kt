@@ -30,34 +30,33 @@ class ReaderTest : WordSpec() {
                 result shouldBe aContext
             }
 
-            "return modified value when map is applied and reader is launched with context" {
+            "return a reader when map is applied on a reader that return a reader" {
                 //Given
-                val aContext = listOf(1)
+                val aContext = 1
+                val aReader = Reader.ask<Int>().map { it * 2 }
 
                 //When
-                val result = Reader.ask<List<Int>>()
-                        .map { it.map { listOf(it * 2) } }
+                val result = Reader.ask<Int>()
+                        .map { aReader }
                         .run(aContext)
 
                 //Then
-                result shouldBe beInstanceOf(List::class)
-                result.size shouldBe 1
-                result[0] shouldBe listOf(2)
+                result shouldBe aReader
+                result.run(aContext) shouldBe 2
             }
 
-            "return modified value when flatMap is applied and reader is launched with context" {
+            "return value when flatMap is applied on a reader that return a reader" {
                 //Given
-                val aContext = listOf(1)
+                val aContext = 1
+                val aReader = Reader.ask<Int>().map { it * 2 }
 
                 //When
-                val result = Reader.ask<List<Int>>()
-                        .map { it.flatMap { listOf(it * 2) } }
+                val result = Reader.ask<Int>()
+                        .flatMap { aReader }
                         .run(aContext)
 
                 //Then
-                result shouldBe beInstanceOf(List::class)
-                result.size shouldBe 1
-                result[0] shouldBe 2
+                result shouldBe 2
             }
 
             "return a Pair of the two readers values when zip is applied on a the first reader with the second reader as parameter and reader is launched with context" {
@@ -75,19 +74,17 @@ class ReaderTest : WordSpec() {
                 result shouldBe Pair(2, 3)
             }
 
-            "return modified value when local is applied and reader is launched with a context of different type than the context expected" {
+            "return value when local is applied and reader is launched with a context of different type than the context expected" {
                 //Given
                 val aContext = "1"
 
                 //When
                 val result = Reader.ask<Int>()
                         .local<String> { it.toInt() }
-                        .map { it + 1 }
-                        .map { it + 2 }
                         .run(aContext)
 
                 //Then
-                result shouldBe 4
+                result shouldBe 1
             }
             "return a Reader instance when reader function is called on a lambda" {
                 //Given
