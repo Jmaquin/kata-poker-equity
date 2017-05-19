@@ -4,6 +4,6 @@ jdk:
 before_install:
  - chmod +x gradlew
 script:
-  - ./gradlew clean cobertura
+  - ./gradlew clean jacoco
 after_success:
   - bash <(curl -s https://codecov.io/bash)
