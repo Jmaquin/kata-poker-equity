@@ -28,6 +28,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.8.7"
     testCompile 'io.kotlintest:kotlintest:2.0.1'
+    testCompile 'io.github.daviddenton:databob.kotlin:0.6.0'
     testRuntime "org.slf4j:slf4j-api:1.7.10"
 }
 
