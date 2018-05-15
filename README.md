@@ -12,14 +12,14 @@ Computer draw two random cards.
 Player draw two random cards.
 
 Other game rules are described below(from https://en.wikipedia.org/wiki/Texas_hold_%27em):  
-Two cards, known as the hole cards, are dealt face down to each player,  
+Two cards, known as the hole cards, are dealt face down to each player,
 and then five community cards are dealt face up in three stages.  
-The stages consist of a series of three cards ("the flop"),  
-later an additional single card ("the turn" or "fourth street"),  
+The stages consist of a series of three cards ("the flop"),
+later an additional single card ("the turn" or "fourth street"),
 and a final card ("the river" or "fifth street").  
 Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards.  
 If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called "playing the board".  
-If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents,  
+If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents,
 using either or both hole cards.
 
 ## User Story 1:
