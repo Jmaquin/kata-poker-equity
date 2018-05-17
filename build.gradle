@@ -32,5 +32,5 @@ dependencies {
     testRuntime "org.slf4j:slf4j-api:1.7.10"
 }
 
-group 'KataPokerEquity'
+group 'PokerKata'
 version '1.0-SNAPSHOT'

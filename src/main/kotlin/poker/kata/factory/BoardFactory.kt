@@ -1,6 +1,6 @@
-package kata.poker.equity.factory
+package poker.kata.factory
 
-import kata.poker.equity.model.*
+import poker.kata.model.*
 
 abstract class BoardFactory {
     companion object {

@@ -1,4 +1,4 @@
-package kata.poker.equity.model
+package poker.kata.model
 
 interface Board {
     val flop: Flop

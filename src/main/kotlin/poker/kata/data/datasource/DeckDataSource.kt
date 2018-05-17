@@ -1,8 +1,8 @@
-package kata.poker.equity.data.datasource
+package poker.kata.data.datasource
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import kata.poker.equity.model.Card
+import poker.kata.model.Card
 
 class DeckDataSource {
     fun getAllCards(): List<Card> =

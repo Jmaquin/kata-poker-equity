@@ -1,10 +1,10 @@
-package kata.poker.equity.factory
+package poker.kata.factory
 
 import io.kotlintest.matchers.beInstanceOf
 import io.kotlintest.matchers.shouldBe
 import io.kotlintest.matchers.shouldThrow
 import io.kotlintest.specs.WordSpec
-import kata.poker.equity.model.*
+import poker.kata.model.*
 
 class BoardFactoryTest : WordSpec() {
 

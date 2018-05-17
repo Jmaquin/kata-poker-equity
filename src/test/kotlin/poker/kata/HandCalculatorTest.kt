@@ -1,4 +1,4 @@
-package kata.poker.equity.factory
+package poker.kata
 
 import org.junit.Test
 

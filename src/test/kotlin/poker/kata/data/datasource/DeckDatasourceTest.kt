@@ -1,10 +1,10 @@
-package kata.poker.equity.data.datasource
+package poker.kata.data.datasource
 
 import io.kotlintest.matchers.beInstanceOf
 import io.kotlintest.matchers.shouldBe
 import io.kotlintest.matchers.shouldNotBe
 import io.kotlintest.specs.WordSpec
-import kata.poker.equity.model.Card
+import poker.kata.model.Card
 
 class DeckDatasourceTest : WordSpec() {
     init {
