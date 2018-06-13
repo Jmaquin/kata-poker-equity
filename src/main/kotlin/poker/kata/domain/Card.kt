@@ -1,9 +1,6 @@
 package poker.kata.domain
 
-data class Card(val code: String, val suit: String, val value: Int) {
-    companion object {
-        fun createWhiteCard(): Card {
-            return Card("", "WHITE CARD", -1)
-        }
-    }
-}
+import poker.kata.enums.Rank
+import poker.kata.enums.Suit
+
+data class Card(val suit: Suit, val rank: Rank)

@@ -5,6 +5,8 @@ import io.kotlintest.matchers.shouldBe
 import io.kotlintest.matchers.shouldThrow
 import io.kotlintest.specs.WordSpec
 import poker.kata.domain.*
+import poker.kata.enums.Rank
+import poker.kata.enums.Suit
 
 class BoardFactoryTest : WordSpec() {
 
@@ -12,7 +14,7 @@ class BoardFactoryTest : WordSpec() {
         "Board factory" should {
             "return a FlopBoard when createBoard is called with a flop only" {
                 //Given
-                val flop = Flop(Card.createWhiteCard(), Card.createWhiteCard(), Card.createWhiteCard())
+                val flop = Flop(Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE))
 
                 //When
                 val flopBoard = BoardFactory.createBoard(flop)
@@ -23,8 +25,8 @@ class BoardFactoryTest : WordSpec() {
 
             "return a TurnBoard when createBoard is called with a flop and one card" {
                 //Given
-                val flop = Flop(Card.createWhiteCard(), Card.createWhiteCard(), Card.createWhiteCard())
-                val card = Card.createWhiteCard()
+                val flop = Flop(Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE))
+                val card = Card(Suit.CLUBS, Rank.THREE)
 
                 //When
                 val turnBoard = BoardFactory.createBoard(flop, card)
@@ -35,9 +37,9 @@ class BoardFactoryTest : WordSpec() {
 
             "return a RiverBoard when createBoard is called with a flop and two cards" {
                 //Given
-                val flop = Flop(Card.createWhiteCard(), Card.createWhiteCard(), Card.createWhiteCard())
-                val firstCard = Card.createWhiteCard()
-                val secondCard = Card.createWhiteCard()
+                val flop = Flop(Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE))
+                val firstCard = Card(Suit.CLUBS, Rank.THREE)
+                val secondCard = Card(Suit.CLUBS, Rank.THREE)
 
                 //When
                 val riverBoard = BoardFactory.createBoard(flop, firstCard, secondCard)
@@ -48,10 +50,10 @@ class BoardFactoryTest : WordSpec() {
 
             "throw IllegalArgumentException when createBoard is called with a flop and more than two cards" {
                 //Given
-                val flop = Flop(Card.createWhiteCard(), Card.createWhiteCard(), Card.createWhiteCard())
-                val firstCard = Card.createWhiteCard()
-                val secondCard = Card.createWhiteCard()
-                val thirdCard = Card.createWhiteCard()
+                val flop = Flop(Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE), Card(Suit.CLUBS, Rank.THREE))
+                val firstCard = Card(Suit.CLUBS, Rank.THREE)
+                val secondCard = Card(Suit.CLUBS, Rank.THREE)
+                val thirdCard = Card(Suit.CLUBS, Rank.THREE)
 
                 //When
                 val exception = shouldThrow<IllegalArgumentException> {
