@@ -4,7 +4,7 @@ import io.kotlintest.matchers.beInstanceOf
 import io.kotlintest.matchers.shouldBe
 import io.kotlintest.matchers.shouldThrow
 import io.kotlintest.specs.WordSpec
-import poker.kata.model.*
+import poker.kata.domain.*
 
 class BoardFactoryTest : WordSpec() {
 

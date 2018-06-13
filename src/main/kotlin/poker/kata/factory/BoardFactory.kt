@@ -1,6 +1,6 @@
 package poker.kata.factory
 
-import poker.kata.model.*
+import poker.kata.domain.*
 
 abstract class BoardFactory {
     companion object {

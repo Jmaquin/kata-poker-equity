@@ -4,7 +4,7 @@ import io.kotlintest.matchers.beInstanceOf
 import io.kotlintest.matchers.shouldBe
 import io.kotlintest.matchers.shouldNotBe
 import io.kotlintest.specs.WordSpec
-import poker.kata.model.Card
+import poker.kata.domain.Card
 
 class DeckDatasourceTest : WordSpec() {
     init {

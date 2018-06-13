@@ -1,4 +1,4 @@
-package poker.kata.model
+package poker.kata.domain
 
 data class Card(val code: String, val suit: String, val value: Int) {
     companion object {
